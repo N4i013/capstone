@@ -1,0 +1,274 @@
+ /* Sidebar Styling */
+ .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 1000; /* Ensures sidebar is above other content */
+}
+
+.sidebar img {
+    width: 100%;
+    max-width: 150px; /* Adjust this value based on the desired size */
+    height: auto;
+    object-fit: contain; /* Ensures the whole image is visible without stretching */
+    margin-bottom: 20px; /* Optional: Add some spacing below the logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+.sidebar a:hover {
+    background-color: #007bff;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px;
+    padding: 1rem;
+}
+
+/* Profile Card Styling */
+.profile-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-card:hover .profile-card-overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+/* Button hover effects */
+.btn {
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Button hover effects with scaling */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    transform: scale(1.1); /* Increase size by 10% */
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: scale(1.1); /* Increase size by 10% */
+}
+
+.card-img-top {
+    width: 100%; /* Ensures the image takes up the full width of the card */
+    height: 150px; /* Sets a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire area without distorting */
+}
+
+/*pet Card Styling */
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    text-align: center;
+}
+.btn {
+    margin: 0.5rem;
+}
+
+/* Pop-up Form Styling */
+.edit-form {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.edit-form-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*Admin-dashboard*/
+
+ /* Pop-up Form Styling */
+ .popup-form {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-form-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*edit-mainpage-content*/
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    background-color: #343a40;
+    padding-top: 20px;
+    color: white;
+}
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+form {
+    margin-bottom: 40px;
+}
+label {
+    font-weight: bold;
+    color: #555;
+}
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    height: 100px;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #0069d9;
+}
+h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+ 
+/*edit-mainpage-content*/
+
+
+/*manage-lost-pet-reports*/
+
+
+/*manage-adoption-reports*/

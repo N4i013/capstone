@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="Find, Care, and Reunite: Your all-in-one web platform for pet adoption, comprehensive pet care resources, and reuniting lost pets with their owners."
+      content="Pet resouces and adoption"
+    />
+    <meta
+      name="Cindy Lyka Banabatac, IaN Michael Barral, Nathan Buligan"
+      content="Pet resources and adoption"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="mystyle/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/QCACAC LOGO.png" />
+    <title>Quzon City Animal Care and Adoption Center</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-wrapper">
+        <!-- Navbar Logo -->
+        <div class="logo">
+          <a href="/"
+            ><img
+              width="63px"
+              height="60px"
+              src="images/QCACAC LOGO.png"
+              alt="LOGO"
+          /></a>
+        </div>
+        <!-- Navbar Links -->
+        <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="petgallery.html">Pet Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contactus.html">Contact us</a></li>
+        </ul>
+        <button
+          type="button"
+          class="button-color"
+          id="loginButton"
+          onclick="window.location.href='login.html';"
+        >
+          Login
+        </button>
+        <button
+          type="button"
+          class="button-color"
+          id="signupButton"
+          onclick="window.location.href='signup.html';"
+        >
+          Signup
+        </button>
+      </div>
+    </nav>
+    <h1>ADOPT ME</h1>
+    <div class="adoptionpage-container">
+      <div class="profile-info">
+        <div class="profile-picture">
+          <img src="images/dog1.jpg" alt="Profile picture of the dog" />
+        </div>
+        <div class="pet-info">
+          <h2 class="pet-name">Ian</h2>
+          <p class="age"><strong>Age:</strong> 3 years old</p>
+          <p class="gender"><strong>Gender:</strong> Female</p>
+          <p class="breed"><strong>Breed:</strong> Poodle</p>
+          <p class="vaccine">
+            <strong>Vaccine Status:</strong> Anti Rabies, Dewormed, 5in1
+            (DHLPPi)
+          </p>
+        </div>
+      </div>
+      <div class="pet-description">
+        <p>
+          Ian is a friendly and energetic Poodle who loves to play fetch and
+          enjoys being around people. She is well-behaved, house-trained, and
+          looking for a loving home. Ian was rescued from the streets of Quezon
+          City and is now fully vaccinated. He is ready to become a cherished
+          member of your family.
+        </p>
+        <button
+          class="adopt-button"
+          data-bs-toggle="modal"
+          data-bs-target="#adoptModal"
+        >
+          ADOPT ME
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="adoptModal"
+      tabindex="-1"
+      aria-labelledby="adoptModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="adoptModalLabel">Pet Adoption Form</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <p class="modal-p">* Indicates required question</p>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="firstname" class="form-label"
+                  >Name<span class="text-danger">*</span></label
+                >
+                <div class="row mb-3">
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fname"
+                      placeholder="First"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lname"
+                      placeholder="Last"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Email address <span class="text-danger">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label"
+                  >Phone number <span class="text-danger">*</span></label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="### ### ####"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label"
+                  >Address <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Street Address"
+                  required
+                />
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    placeholder="City"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="region"
+                    placeholder="Region"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="zipcode"
+                    placeholder="Postal / Zip code"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    placeholder="Country"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="pettype" class="form-label"
+                  >Type of Pet <span class="text-danger">*</span></label
+                ><br />
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="pettype"
+                    id="dog"
+                    value="dog"
+                    required
+                  />
+                  <label class="form-check-label" for="dog">Dog</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="pettype"
+                    id="cat"
+                    value="cat"
+                  />
+                  <label class="form-check-label" for="cat">Cat</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="pettype"
+                    id="others"
+                    value="others"
+                  />
+                  <label class="form-check-label" for="others">Others</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="qcitizenid" class="form-label"
+                  >Upload QCitizen ID or any valid ID<span class="text-danger"
+                    >*</span
+                  ></label
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  id="qcitizenid"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="petphoto" class="form-label"
+                  >Litrato nang napiling Aso o Pusa
+                  <span class="text-danger">*</span></label
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  id="petphoto"
+                  required
+                />
+              </div>
+              <button type="submit" class="modal-submit-btn">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS and dependencies (optional, for certain components) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+      <div class="container">
+        <p>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
+          <a href="contactus.html">Contact Us</a>
+        </p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/animalcareandadoptioncenter"
+            ><img src="images/facebook.png" alt="Facebook"
+          /></a>
+          <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="images/gmail.png" alt="Gmail" /></a>
+        </div>
+      </div>
+      <br />
+      <p>&copy; 2024 Pet Adoption. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

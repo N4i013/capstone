@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Merriweather:wght@300;700&family=Montserrat:wght@500&family=Oswald:wght@300;400&family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+
+html, body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    /* Your existing background properties */
+   background: rgb(255, 255, 255);
+   background-image: url(../pictures/cover.png);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   height:100vh;
+   padding-top: 100px; 
+   background-position: center;
+   display: flex;
+   align-items: center;
+}
+   /* footer*/
+.footer-container {
+    background-color: #011F4B;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.container {
+    flex: 1; /* Ensures the container takes up all available space */
+  }
+
+h1{
+    font-family: HOLTWOOD ONE SC, Arial, Helvetica, sans-serif;
+    color:#011F4B;
+    text-align: center;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* NAVBAR */
+/* Navbar Styles */
+#navbar {
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none; /* Hide the element */
+  }
+  
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .avatar-initials {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+  }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 63px; 
+    height: 60px;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    margin: 0 15px;
+    position: relative; /* Ensure pseudo-elements are relative to this */
+}
+
+#navbar li a {
+    color: rgb(58, 56, 57);
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+#navbar li a:hover {
+    color: #011F4B;
+}
+
+/* Animated Bottom Line */
+#navbar li a:before, 
+#navbar li a:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: -2px;
+    background: rgb(1, 31, 75);
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+#navbar li a:before {
+    left: 0;
+}
+
+#navbar li a:after {
+    right: 0;
+}
+
+#navbar li a:hover:before, 
+#navbar li a:hover:after {
+    width: 100%;
+}
+
+/* Button and Avatar Container */
+
+
+
+  
+/*index, frontpage*/
+#pic{
+    width: 600px;
+    height: 300px;
+    justify-content: center;
+}
+/*login-sigup page*/
+.button-color {
+    box-sizing: border-box;
+    background-color: rgb(3, 37, 76);
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Adjust padding to change button size */
+    font-size: 14px; /* Adjust font size to change button size */
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px; /* Adjust margin as needed */
+    line-height: normal; /* Ensure line height is not adding extra height */
+}
+.button-color:active,
+.button-color.clicked{
+    background-color: lightgray; /* Change background color on click */
+    color: black; /* Change text color on click */
+}
+/*button-color*/
+.custom-submit-btn {
+    background-color: #005B96;
+    color: white; 
+    width: 100%; /* Set specific width */
+    height: 40px; /* Set specific height */
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 14px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none; 
+    outline: none;
+}
+
+/*password hidden/show eye-icon*/
+.password-toggle {
+    position: relative;
+}
+.password-toggle .btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+}
+#togglePassword, #toggleConfirmPassword {
+    box-shadow: none; /* Removes any shadow from the button */
+    border: none; /* Removes any border if present */
+    background: none; /* Removes the default button background */
+    padding: 0; /* Removes default button padding */
+}
+
+/* Change the color of the eye icon */
+#eyeIcon, #eyeConfirmIcon {
+    color: #9a9898; 
+    font-size: 15px;
+}
+
+/* Style for the alert container */
+#alertContainer {
+    font-size: 0.75rem; 
+    padding: 0.5rem; 
+    margin-bottom: 0.5rem; 
+}
+
+/* Style for alert messages within the container */
+#alertContainer .alert {
+    font-size: 0.75rem; 
+    padding: 0.5rem; 
+    margin-bottom: 0.5rem; 
+    border-radius: 0.25rem; 
+}
+
+/* Style for the close button within alert messages */
+#alertContainer .alert .btn-close {
+    font-size: 0.75rem; 
+    padding: 0.25rem; 
+}
+
+/*pet gallery page*/
+.btn-pet {
+    background-color: #185FA3;
+    color: white; 
+    padding: 5px 15px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-pet:hover {
+    background-color: #3A8FDE; 
+    border: #012c49;
+    color: white;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.image-container img.hidden {
+    opacity: 0;
+}
+
+.image-container:hover img {
+    animation: flash 3s infinite;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    33% { opacity: 0; }
+    66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.image-container img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.image-container img:nth-child(3) {
+    animation-delay: 2s;
+}
+/*user profile page*/
+.profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.section-divider {
+    border-bottom: 2px solid #ccc; /* Adjust color and thickness as needed */
+    margin-bottom: 20px; /* Optional: Adjust spacing */
+}
+
+/*miising page*/
+.missingpage h2{
+    color: #011F4B;
+}
+#missing1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+#info {
+    place-items: center;
+    height: 100vh; /* optional, makes the container take full height of the viewport */
+}
+
+.table th, .table td {
+    padding: 8px; /* optional, for better table styling */
+}
+
+.alert {
+    text-align: center;
+    font-size: 24px;
+}
+
+/*Contact Us Page*/
+#contact {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+}
+.contact-info {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.contact-info h3 {
+    margin-top: 0;
+}
+.contact-info p {
+    margin: 10px 0;
+}
+.form-container {
+    flex: 2;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+textarea {
+    resize: vertical;
+}
+.contact-submit-btn {
+    padding: 10px;
+    border: none;
+    background-color: #185FA3;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    input, textarea {
+        font-size: 14px;
+    }
+    button {
+        font-size: 14px;
+    }
+}
+
+/*adoptionpage*/
+.adoptionpage-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.profile-info {
+    display: flex;
+    gap: 20px;
+}
+.profile-picture {
+    max-width: 300px;
+    max-height: 300px;
+}
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    margin-top: 23%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.pet-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pet-description {
+    margin-top: 20px;
+   
+}
+.adopt-button {
+    margin-top: 10px;
+    padding: 10px 20px; /* Adjust padding to maintain button size */
+    min-width: 120px; /* Set a minimum width for the button */
+    background-color: #005B96;
+    color: white; 
+    border: none;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px; /* Adjust font size to your desired normal size */
+    cursor: pointer;
+
+}
+.adopt-button:hover {
+    background-color: #03396C; 
+    border: #012c49;
+    color: white;
+}
+/*pet adoption page*/
+ 
+/* modal */
+.modal-title{
+    font-family: HOLTWOOD ONE SC, Arial, Helvetica, sans-serif;
+    color: #011F4B;
+    justify-content: center;
+}
+.modal-p{
+    color: red;
+    padding: 5%;
+}
+.modal-submit-btn {
+    background-color: #005B96;
+    color: white; 
+    width: 130px; /* Set specific width */
+    height: 40px; /* Set specific height */
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 14px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none; 
+    outline: none;
+}
+
+.modal-submit-btn:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: none; /* Remove any potential box shadow on focus */
+}
+
+.custom-modal-dialog {
+    max-width: 50%; /* Adjust the maximum width of the modal */
+}
+
+.custom-modal-body {
+    height: 400px; /* Adjust the height of the modal body if needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== Responsive Mobile Menu============*/
+.overlay-menu {
+    background: lightblue;
+    color: rgb(13, 26, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 15px;
+    transform: translateX(-100%);
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+}
+
+.overlay-menu ul, .overlay-menu li {
+    display: block;
+    position: relative;
+}
+
+.overlay-menu li a{
+    display: block;
+    font-size: 1.8em;
+    letter-spacing: 4px;
+    padding: 10px 0;
+    text-align: right;
+    text-transform: uppercase;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.overlay-menu li a:hover,
+.overlay-menu li a:active {
+    color: rgb(28, 121, 184);
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+} 
+
+
+
+
+

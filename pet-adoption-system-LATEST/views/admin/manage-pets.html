@@ -1,0 +1,106 @@
+<html lang="en">
+    <head>
+        <meta name="Find, Care, and Reunite: Your all-in-one web platform for pet adoption, comprehensive pet care resources, and reuniting lost pets with their owners." content="Pet resouces and adoption">
+        <meta name="Cindy Lyka Banabatac, IaN Michael Barral, Nathan Buligan" content="Pet resources and adoption">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <link 
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+          crossorigin="anonymous"
+        />
+        <link 
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous"
+        />
+        <link rel="icon" type="image" href="images/QCACAC LOGO.png">
+        <link rel="stylesheet" href="mystyle/admin-style.css">
+        <title>Adminstrator</title>
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <div class="sidebar d-flex flex-column p-3">
+            <a href="index.html">
+                <img src="images/QCACAC LOGO.png" alt="Logo">
+            </a>
+            <h2 class="text-white text-center">Admin Dashboard</h2>
+            <a href="/admin-dashboard">View All Users</a>
+            <a href="/homepage-content">Manage Home Page Content</a>
+            <a href="/manage-pets">Manage Pet Gallery</a>
+            <a href="/manage-lost-pet-reports">Manage Lost Pet Reports</a>
+            <a href="/manage-adoption-reports">Manage Adoption Reports</a>
+        </div>
+    
+    
+        <div class="main-content">
+            <h2 class="text-center mb-4">Manage Pet Profiles</h2>
+            <div class="row">
+                <!-- Example Pet Card -->
+                <div class="col-md-4 d-flex justify-content-center mb-4">
+                    <div class="card">
+                        <img src="images/dog3.jpg" class="card-img-top" alt="Buddy">
+                        <div class="card-body">
+                            <h5 class="card-title">Buddy</h5>
+                            <p class="card-text"><strong>Breed:</strong> Labrador</p>
+                            <p class="card-text"><strong>Gender:</strong> Male</p>
+                            <a href="#" class="btn btn-primary" onclick="openEditForm('Buddy', 'Labrador', 'Male')">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>  
+
+        <!-- Edit Pet Form (Popup) -->
+    <div id="editPetForm" class="edit-form">
+        <div class="edit-form-content">
+            <span class="close-btn" onclick="closeEditForm()">&times;</span>
+            <h2>Edit Pet Profile</h2>
+            <form id="petForm">
+                <div class="mb-3">
+                    <label for="petName" class="form-label">Pet Name</label>
+                    <input type="text" class="form-control" id="petName" name="petName">
+                </div>
+                <div class="mb-3">
+                    <label for="petBreed" class="form-label">Breed</label>
+                    <input type="text" class="form-control" id="petBreed" name="petBreed">
+                </div>
+                <div class="mb-3">
+                    <label for="petGender" class="form-label">Gender</label>
+                    <select class="form-select" id="petGender" name="petGender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    <script>
+        // Function to open the edit form and populate fields
+        function openEditForm(name, breed, gender) {
+            document.getElementById('editPetForm').style.display = 'block';
+            document.getElementById('petName').value = name;
+            document.getElementById('petBreed').value = breed;
+            document.getElementById('petGender').value = gender;
+        }
+
+        // Function to close the edit form
+        function closeEditForm() {
+            document.getElementById('editPetForm').style.display = 'none';
+        }
+
+        // Optional: Handle form submission
+        document.getElementById('petForm').onsubmit = function(event) {
+            event.preventDefault();
+            alert('Pet profile updated successfully!');
+            closeEditForm();
+        }
+    </script>
+
+    
+</html>
